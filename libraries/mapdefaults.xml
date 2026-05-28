@@ -293,4 +293,24 @@
     <resourcearea ref="sphere_large_methane_high_average" amount="5" />
   </add>
 
+  <!-- Cluster_403_Sector001_macro — helium (medhigh→3.33x), ore/silicon (medplus→2.67x), nividium (medplus→2x) [Split DLC, no vanilla resourceareas] -->
+  <add sel="/defaults/dataset[@macro='Cluster_403_Sector001_macro']/properties">
+    <resourceareas>
+      <resourcearea ref="sphere_large_helium_high_average" amount="3" />
+      <resourcearea ref="sphere_large_ore_high_average" amount="4" />
+      <resourcearea ref="sphere_large_silicon_high_average" amount="4" />
+      <resourcearea ref="sphere_medium_nividium_high_fast" amount="2" />
+    </resourceareas>
+  </add>
+
+  <!-- Cluster_406_Sector001_macro — methane (medhigh→5x), ore/silicon (medplus→2.67x), nividium (medplus→2x) [Split DLC, no vanilla resourceareas] -->
+  <add sel="/defaults/dataset[@macro='Cluster_406_Sector001_macro']/properties">
+    <resourceareas>
+      <resourcearea ref="sphere_large_methane_high_average" amount="4" />
+      <resourcearea ref="sphere_large_ore_high_average" amount="4" />
+      <resourcearea ref="sphere_large_silicon_high_average" amount="4" />
+      <resourcearea ref="sphere_medium_nividium_high_fast" amount="2" />
+    </resourceareas>
+  </add>
+
 </diff>
