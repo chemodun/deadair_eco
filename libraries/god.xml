@@ -1393,4 +1393,523 @@
       </module>
     </product>
   </add>
+
+  <!-- ============================================================ -->
+  <!-- Chem: Staged prefab station tuning (9.00)                    -->
+  <!-- Mirrors the non-prefab product changes:                      -->
+  <!--   - economy -> security/sunlight placement conditions        -->
+  <!--   - add security for paranid/holyorder (had no condition)    -->
+  <!--   - remove economy restriction on basic resources            -->
+  <!--   - remove @sector quota, add @cluster limit                 -->
+  <!--   - fix exact=N stage to min=1 max=N to allow growth         -->
+  <!--   - remove hatikvah from argon advancedcomposites location   -->
+  <!-- ============================================================ -->
+  <!-- ===== Chem: prefab stations - antigone ===== -->
+  <!-- Chem: ant_advancedcomposites_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_advancedcomposites_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ant_claytronics_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_claytronics_prefab_04_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: ant_claytronics_prefab_08_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_claytronics_prefab_08_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: ant_foodrations_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_foodrations_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ant_foodrations_prefab_04_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='ant_foodrations_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: ant_hullparts_prefab_06_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_hullparts_prefab_06_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: ant_hullparts_prefab_10_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_hullparts_prefab_10_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: ant_medicalsupplies_prefab_06_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_medicalsupplies_prefab_06_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ant_medicalsupplies_prefab_06_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='ant_medicalsupplies_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: ant_plasmaconductors_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_plasmaconductors_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ant_plasmaconductors_prefab_04_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='ant_plasmaconductors_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: ant_plasmaconductors_prefab_10_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_plasmaconductors_prefab_10_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ant_refinedmetals_prefab_05_01 - remove economy spawn restriction -->
+  <remove sel="/god/products/station[@id='ant_refinedmetals_prefab_05_01']/location/economy"/>
+  <!-- Chem: ant_refinedmetals_prefab_05_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='ant_refinedmetals_prefab_05_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: ant_spices_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ant_spices_prefab_03_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+
+  <!-- ===== Chem: prefab stations - argon ===== -->
+  <!-- Chem: arg_advancedcomposites_prefab_04_01 - remove hatikvah from faction list -->
+  <replace sel="/god/products/station[@id='arg_advancedcomposites_prefab_04_01']/location/@faction">[argon]</replace>
+  <!-- Chem: arg_advancedcomposites_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_advancedcomposites_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: arg_advancedcomposites_prefab_04_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='arg_advancedcomposites_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_claytronics_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_claytronics_prefab_04_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: arg_claytronics_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='arg_claytronics_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='arg_claytronics_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_claytronics_prefab_04_01 - allow staged growth (exact=2 -> min=1 max=2) -->
+  <replace sel="/god/products/station[@id='arg_claytronics_prefab_04_01']/station/stage">
+    <stage min="1" max="2"/>
+  </replace>
+  <!-- Chem: arg_claytronics_prefab_08_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_claytronics_prefab_08_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: arg_foodrations_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_foodrations_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: arg_foodrations_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='arg_foodrations_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='arg_foodrations_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_graphene_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='arg_graphene_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='arg_graphene_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_hullparts_prefab_06_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_hullparts_prefab_06_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: arg_hullparts_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='arg_hullparts_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='arg_hullparts_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_hullparts_prefab_06_01 - allow staged growth (exact=4 -> min=1 max=4) -->
+  <replace sel="/god/products/station[@id='arg_hullparts_prefab_06_01']/station/stage">
+    <stage min="1" max="4"/>
+  </replace>
+  <!-- Chem: arg_hullparts_prefab_10_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_hullparts_prefab_10_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: arg_hullparts_prefab_10_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='arg_hullparts_prefab_10_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='arg_hullparts_prefab_10_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_hullparts_prefab_10_01 - allow staged growth (exact=6 -> min=1 max=6) -->
+  <replace sel="/god/products/station[@id='arg_hullparts_prefab_10_01']/station/stage">
+    <stage min="1" max="6"/>
+  </replace>
+  <!-- Chem: arg_medicalsupplies_prefab_06_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_medicalsupplies_prefab_06_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: arg_medicalsupplies_prefab_06_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='arg_medicalsupplies_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_plasmaconductors_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_plasmaconductors_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: arg_plasmaconductors_prefab_04_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='arg_plasmaconductors_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_plasmaconductors_prefab_10_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_plasmaconductors_prefab_10_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: arg_refinedmetals_prefab_05_01 - remove economy spawn restriction -->
+  <remove sel="/god/products/station[@id='arg_refinedmetals_prefab_05_01']/location/economy"/>
+  <!-- Chem: arg_refinedmetals_prefab_05_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='arg_refinedmetals_prefab_05_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: arg_spices_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='arg_spices_prefab_03_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+
+  <!-- ===== Chem: prefab stations - boron ===== -->
+  <!-- Chem: bor_advancedcomposites_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='bor_advancedcomposites_prefab_03_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: bor_advancedcomposites_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='bor_advancedcomposites_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='bor_advancedcomposites_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: bor_antimattercells_prefab_04_01 - remove economy spawn restriction -->
+  <remove sel="/god/products/station[@id='bor_antimattercells_prefab_04_01']/location/economy"/>
+  <!-- Chem: bor_bofu_prefab_06_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='bor_bofu_prefab_06_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+  <!-- Chem: bor_claytronics_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='bor_claytronics_prefab_04_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: bor_energycells_prefab_04_01 - economy -> sunlight placement -->
+  <replace sel="/god/products/station[@id='bor_energycells_prefab_04_01']/location/economy">
+    <sunlight min="1.0"/>
+  </replace>
+  <!-- Chem: bor_hullparts_prefab_08_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='bor_hullparts_prefab_08_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: bor_hullparts_prefab_08_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='bor_hullparts_prefab_08_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='bor_hullparts_prefab_08_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: bor_medicalsupplies_prefab_08_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='bor_medicalsupplies_prefab_08_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: bor_medicalsupplies_prefab_08_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='bor_medicalsupplies_prefab_08_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='bor_medicalsupplies_prefab_08_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: bor_plankton_prefab_06_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='bor_plankton_prefab_06_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+  <!-- Chem: bor_plankton_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='bor_plankton_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='bor_plankton_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: bor_plasmaconductors_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='bor_plasmaconductors_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: bor_plasmaconductors_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='bor_plasmaconductors_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='bor_plasmaconductors_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: bor_refinedmetals_prefab_03_01 - remove economy spawn restriction -->
+  <remove sel="/god/products/station[@id='bor_refinedmetals_prefab_03_01']/location/economy"/>
+  <!-- Chem: bor_refinedmetals_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='bor_refinedmetals_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='bor_refinedmetals_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+
+  <!-- ===== Chem: prefab stations - holyorder ===== -->
+  <!-- Chem: hol_advancedcomposites_prefab_04_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_advancedcomposites_prefab_04_01']/location">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </add>
+  <!-- Chem: hol_advancedelectronics_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_advancedelectronics_prefab_03_01']/location">
+    <security min="0.75"/>
+  </add>
+  <!-- Chem: hol_claytronics_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_claytronics_prefab_03_01']/location">
+    <security min="0.75"/>
+  </add>
+  <!-- Chem: hol_claytronics_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='hol_claytronics_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='hol_claytronics_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: hol_energycells_prefab_03_01 - add sunlight placement condition -->
+  <add sel="/god/products/station[@id='hol_energycells_prefab_03_01']/location">
+    <sunlight min="1.0"/>
+  </add>
+  <!-- Chem: hol_energycells_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='hol_energycells_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='hol_energycells_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: hol_graphene_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='hol_graphene_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='hol_graphene_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: hol_hullparts_prefab_06_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_hullparts_prefab_06_01']/location">
+    <security min="0.75"/>
+  </add>
+  <!-- Chem: hol_hullparts_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='hol_hullparts_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='hol_hullparts_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: hol_majasnails_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_majasnails_prefab_03_01']/location">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </add>
+  <!-- Chem: hol_medicalsupplies_prefab_06_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_medicalsupplies_prefab_06_01']/location">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </add>
+  <!-- Chem: hol_medicalsupplies_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='hol_medicalsupplies_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='hol_medicalsupplies_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: hol_microchips_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_microchips_prefab_03_01']/location">
+    <security min="0.75"/>
+  </add>
+  <!-- Chem: hol_microchips_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='hol_microchips_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='hol_microchips_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: hol_plasmaconductors_prefab_06_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_plasmaconductors_prefab_06_01']/location">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </add>
+  <!-- Chem: hol_refinedmetals_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='hol_refinedmetals_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='hol_refinedmetals_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: hol_sojahusk_prefab_06_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_sojahusk_prefab_06_01']/location">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </add>
+  <!-- Chem: hol_sojahusk_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='hol_sojahusk_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='hol_sojahusk_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: hol_spices_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='hol_spices_prefab_03_01']/location">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </add>
+
+  <!-- ===== Chem: prefab stations - paranid ===== -->
+  <!-- Chem: par_advancedcomposites_prefab_04_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_advancedcomposites_prefab_04_01']/location">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </add>
+  <!-- Chem: par_advancedelectronics_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_advancedelectronics_prefab_03_01']/location">
+    <security min="0.75"/>
+  </add>
+  <!-- Chem: par_claytronics_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_claytronics_prefab_03_01']/location">
+    <security min="0.75"/>
+  </add>
+  <!-- Chem: par_claytronics_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_claytronics_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_claytronics_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_energycells_prefab_03_01 - add sunlight placement condition -->
+  <add sel="/god/products/station[@id='par_energycells_prefab_03_01']/location">
+    <sunlight min="1.0"/>
+  </add>
+  <!-- Chem: par_energycells_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_energycells_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_energycells_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_graphene_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_graphene_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_graphene_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_hullparts_prefab_06_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_hullparts_prefab_06_01']/location">
+    <security min="0.75"/>
+  </add>
+  <!-- Chem: par_hullparts_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_hullparts_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_hullparts_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_majasnails_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_majasnails_prefab_03_01']/location">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </add>
+  <!-- Chem: par_medicalsupplies_prefab_06_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_medicalsupplies_prefab_06_01']/location">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </add>
+  <!-- Chem: par_medicalsupplies_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_medicalsupplies_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_medicalsupplies_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_microchips_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_microchips_prefab_03_01']/location">
+    <security min="0.75"/>
+  </add>
+  <!-- Chem: par_microchips_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_microchips_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_microchips_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_plasmaconductors_prefab_06_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_plasmaconductors_prefab_06_01']/location">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </add>
+  <!-- Chem: par_refinedmetals_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_refinedmetals_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_refinedmetals_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_siliconwafers_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_siliconwafers_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_siliconwafers_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_sojahusk_prefab_06_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_sojahusk_prefab_06_01']/location">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </add>
+  <!-- Chem: par_sojahusk_prefab_06_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='par_sojahusk_prefab_06_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='par_sojahusk_prefab_06_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: par_spices_prefab_03_01 - add security placement condition -->
+  <add sel="/god/products/station[@id='par_spices_prefab_03_01']/location">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </add>
+
+  <!-- ===== Chem: prefab stations - split ===== -->
+  <!-- Chem: spl_advancedcomposites_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='spl_advancedcomposites_prefab_03_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: spl_advancedelectronics_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='spl_advancedelectronics_prefab_03_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: spl_cheltmeat_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='spl_cheltmeat_prefab_03_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+  <!-- Chem: spl_claytronics_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='spl_claytronics_prefab_03_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: spl_claytronics_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='spl_claytronics_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='spl_claytronics_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: spl_energycells_prefab_02_01 - economy -> sunlight placement -->
+  <replace sel="/god/products/station[@id='spl_energycells_prefab_02_01']/location/economy">
+    <sunlight min="1.0"/>
+  </replace>
+  <!-- Chem: spl_energycells_prefab_02_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='spl_energycells_prefab_02_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='spl_energycells_prefab_02_01']/quotas/quota" type="@cluster">2</add>
+  <!-- Chem: spl_energycells_prefab_02_01 - allow staged growth (exact=2 -> min=1 max=2) -->
+  <replace sel="/god/products/station[@id='spl_energycells_prefab_02_01']/station/stage">
+    <stage min="1" max="2"/>
+  </replace>
+  <!-- Chem: spl_graphene_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='spl_graphene_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='spl_graphene_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: spl_hullparts_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='spl_hullparts_prefab_03_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: spl_hullparts_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='spl_hullparts_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='spl_hullparts_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: spl_medicalsupplies_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='spl_medicalsupplies_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: spl_medicalsupplies_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='spl_medicalsupplies_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='spl_medicalsupplies_prefab_04_01']/quotas/quota" type="@cluster">2</add>
+  <!-- Chem: spl_plasmaconductors_prefab_06_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='spl_plasmaconductors_prefab_06_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: spl_refinedmetals_prefab_05_01 - remove economy spawn restriction -->
+  <remove sel="/god/products/station[@id='spl_refinedmetals_prefab_05_01']/location/economy"/>
+  <!-- Chem: spl_scruffinfruits_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='spl_scruffinfruits_prefab_04_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+  <!-- Chem: spl_scruffinfruits_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='spl_scruffinfruits_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='spl_scruffinfruits_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: spl_superfluidcoolant_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='spl_superfluidcoolant_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='spl_superfluidcoolant_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+
+  <!-- ===== Chem: prefab stations - teladi ===== -->
+  <!-- Chem: tel_advancedcomposites_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_advancedcomposites_prefab_03_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: tel_advancedcomposites_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_advancedcomposites_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_advancedcomposites_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: tel_advancedelectronics_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_advancedelectronics_prefab_04_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: tel_claytronics_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_claytronics_prefab_04_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: tel_claytronics_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_claytronics_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_claytronics_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: tel_energycells_prefab_04_01 - economy -> sunlight placement -->
+  <replace sel="/god/products/station[@id='tel_energycells_prefab_04_01']/location/economy">
+    <sunlight min="1.0"/>
+  </replace>
+  <!-- Chem: tel_energycells_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_energycells_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_energycells_prefab_04_01']/quotas/quota" type="@cluster">2</add>
+  <!-- Chem: tel_graphene_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_graphene_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_graphene_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: tel_hullparts_prefab_08_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_hullparts_prefab_08_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: tel_hullparts_prefab_08_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_hullparts_prefab_08_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_hullparts_prefab_08_01']/quotas/quota" type="@cluster">2</add>
+  <!-- Chem: tel_medicalsupplies_prefab_07_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_medicalsupplies_prefab_07_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: tel_medicalsupplies_prefab_07_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_medicalsupplies_prefab_07_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_medicalsupplies_prefab_07_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: tel_microchips_prefab_05_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_microchips_prefab_05_01']/location/economy">
+    <security min="0.75"/>
+  </replace>
+  <!-- Chem: tel_microchips_prefab_05_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_microchips_prefab_05_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_microchips_prefab_05_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: tel_nostropoil_prefab_03_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_nostropoil_prefab_03_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+  <!-- Chem: tel_nostropoil_prefab_03_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_nostropoil_prefab_03_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_nostropoil_prefab_03_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: tel_plasmaconductors_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_plasmaconductors_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: tel_plasmaconductors_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_plasmaconductors_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_plasmaconductors_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: tel_quantumtubes_prefab_04_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_quantumtubes_prefab_04_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: tel_quantumtubes_prefab_04_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='tel_quantumtubes_prefab_04_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='tel_quantumtubes_prefab_04_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: tel_siliconwafers_prefab_06_01 - remove economy spawn restriction -->
+  <remove sel="/god/products/station[@id='tel_siliconwafers_prefab_06_01']/location/economy"/>
+  <!-- Chem: tel_teladianium_prefab_08_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='tel_teladianium_prefab_08_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+
+  <!-- ===== Chem: prefab stations - terran ===== -->
+  <!-- Chem: ter_computronicsubstrate_prefab_02_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ter_computronicsubstrate_prefab_02_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ter_medicalsupplies_prefab_02_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ter_medicalsupplies_prefab_02_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ter_medicalsupplies_prefab_02_01 - add cluster limit -->
+  <add sel="/god/products/station[@id='ter_medicalsupplies_prefab_02_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: ter_metallicmicrolattice_prefab_02_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ter_metallicmicrolattice_prefab_02_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ter_metallicmicrolattice_prefab_02_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='ter_metallicmicrolattice_prefab_02_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='ter_metallicmicrolattice_prefab_02_01']/quotas/quota" type="@cluster">1</add>
+  <!-- Chem: ter_proteinpaste_prefab_02_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ter_proteinpaste_prefab_02_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+  <!-- Chem: ter_siliconcarbide_prefab_02_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ter_siliconcarbide_prefab_02_01']/location/economy">
+    <security min="0.5" max="0.75" maxbound="false"/>
+  </replace>
+  <!-- Chem: ter_terranmre_prefab_02_01 - economy -> security placement -->
+  <replace sel="/god/products/station[@id='ter_terranmre_prefab_02_01']/location/economy">
+    <security min="0.25" max="0.5" maxbound="false"/>
+  </replace>
+  <!-- Chem: ter_terranmre_prefab_02_01 - remove sector quota, add cluster limit -->
+  <remove sel="/god/products/station[@id='ter_terranmre_prefab_02_01']/quotas/quota/@sector"/>
+  <add sel="/god/products/station[@id='ter_terranmre_prefab_02_01']/quotas/quota" type="@cluster">1</add>
 </diff>
