@@ -3,7 +3,7 @@
   <macro name="prod_gen_da_mil_schematics_ter_macro" class="production" alias="prod_gen_da_mil_schematics_macro">
     <component ref="prod_gen_da_mil_schematics_ter" />
     <properties>
-      <identification name="{33232473,0018}" shortname="{33232473,0015}" description="{33232473,0019}" makerrace="terran"/>
+      <identification name="{33232473,0018}" shortname="{33232473,0015}" description="{33232473,0019}" makerrace="terran" />
       <build>
         <sets>
           <set ref="factory" />
@@ -16,7 +16,7 @@
       <production wares="da_mil_schematics">
         <queue ware="da_mil_schematics" />
       </production>
-      <workforce max="500"/>
+      <workforce max="500" />
     </properties>
   </macro>
 </macros>
