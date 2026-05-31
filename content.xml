@@ -5,7 +5,7 @@
 	<dependency id="ego_dlc_pirate" optional="false" name="Tides of Avarice"/>
 	<dependency id="ego_dlc_boron" optional="false" name="Fish People"/>
 	<dependency id="ego_dlc_timelines" optional="true" name="Not Sandbox DLC"/>
-	<dependency version="700"/>
+	<dependency version="900"/>
 	<text language="7" 	name="DeadAir Eco" description="Rebalance of pricing, production, and general economy." author="DeadAir" />
 	<text language="33" name="DeadAir Eco" description="Rebalance of pricing, production, and general economy." author="DeadAir" />
 	<text language="34" name="DeadAir Eco" description="Rebalance of pricing, production, and general economy." author="DeadAir" />
