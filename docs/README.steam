@@ -1,0 +1,206 @@
+[h1]DeadAir Eco by Chem O`Dun[/h1]
+
+[h2][b]Message from the DeadAir[/b][/h2]
+
+I have decided to completely retire from X4 Modding. I have added licenses to Eco, Scripts, and DeadTater if any persons are interested in using, modifying, or continuing my works. Thank you for all the support and interest in my work over these years
+
+[h2][b]Message from Chem O`Dun[/b][/h2]
+
+There is adoption the original mod to the [b]game version 9.0[/b].
+Take into account that the mod is not compatible with older versions of X4. If you want to use it on older version, please use the original mod.
+Additionally, please be informed that some ideas from the original mod now is implemented in a vanilla version of the game.
+
+[h2][b]Dynamic Universe (another DeadAir mod)[/b][/h2]
+
+Status: unchanged
+
+Minimalized diff mod for economy changes in X4. Readme is often out of date on features or numbers so feel free to contact me on the Egosoft Discord or check patch notes on pushes.
+
+[h2][b]AiScripts\Build.Shiptrader.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Added chance for player to get rookies or veterans on hiring.
+[*] Increased amount of ships assigned to trade for NPC shipyards and wharves.
+[*] Added logic for traders to be assigned to Xenon shipyards.
+[/list]
+[h2][b]Structure Macro Changes[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Doubled capacity of drones for build modules to prevent AI from having too few drones to build ships at full speed.
+[*] Increased Terran habitation modules to have same worker capacity as other factions.
+[*] Updated threatscore for several xenon modules.
+[/list]
+[h2][b]Map Changes[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Added asteroid fields to cluster 403, 406
+[*] Added gas field to cluster 403, 406
+[/list]
+[h2][b]Libraries\Baskets.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Adjusted wares in baskets used by AI.
+[/list]
+[h2][b]Libraries\Constructionplans.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Replaced 1M6S dock modules at important stations with 3M6S modules to improve ship docking capacity.
+[/list]
+[h2][b]Libraries\Defaults.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Adjusted threatscore for different ships and increased station threatscore.
+[/list]
+[h2][b]Libraries\God.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Increases allowed stations per zone to accomodate higher density.
+[*] Removes Argon and Paranid stations from Split DLC sectors so they stop wasting resources and CPU cycles.
+[*] Removes several quotas that cause smaller stations but does not change total production module count.
+[/list]
+[h2][b]Libraries\Jobs.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Adjusted baskets used by traders to improve trader efficien (partly done by 9.0 vanilla).
+[*] Adjusted trade ships to use traderoutine instead of distributewares aiscript so they will actually respond to trade imbalances on demand side instead of supply side (mostly done by 9.0 vanilla).
+[*] Added jobs for silicon mining and ore mining for Xenon.
+[*] Added missing water trader jobs for Antigone.
+[/list]
+[h2][b]Libraries\Loadoutrules.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Increased weighting values for imprortant drones (transport drones for traders and build drones for construction ships).
+[*] Attempted to reduce NPC ships loading up on deployables that serve no purpose other than to tank the economy.
+[/list]
+[h2][b]Libraries\mapdefaults.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Adjusts sector economy ratings to remove undocumented effect on station size generation.
+[*] For version 9.0, increased resource yields and "recovery" speed of several areas that are vital to the factions economic stability.
+[/list]
+[h2][b]Libraries\Modulegroups.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Added new groups for Advanced Schematics, Military Schematics, and Labor Union Contracts.
+[/list]
+[h2][b]Libraries\Modules.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Increased amount of modules that NPC are allowed to build on a single station. This greatly reduces the number of stations required for a functional economy.
+[/list]
+[h2][b]Libraries\Parameters.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Increased amount of modules that NPC are allowed to build on a single station.
+[*] Increased default level of drone loadout to prevent ships without enough drones to function effectively.
+[/list]
+[h2][b]Libraries\People.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Increased fill percentage of certain NPC crews.
+[*] Ships with Regular crews will have 50%+ of the ships capacity.
+[*] Ships with Veteran crews will have 75%+ of the ships capacity.
+[*] Ships with Elite crews will have 90%+ of the ships capacity.
+[*] The higher importance the ship is to the faction, the higher the amount and ability of the crew.
+[/list]
+[h2][b]Libraries\Region_Definitions.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Increased resource yields of several areas that are vital to the factions economic stability.
+[/list]
+[h2][b]Libraries\Ships.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Adjusted the crews used by different ships.
+[/list]
+[h2][b]Libraries\Wares.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Adjusts ware pricing to balance credits / m3 so traders will be rewarded for prioritizing shipping needed resources.
+[*] Adjusts ware production cycles to standard increments. Scales required resources to match ratio from vanilla (Station calculator will still be accurate for ratio of modules not including workforce).
+[*] Adjusts workforce effects to be more pronounced. This allows fewer stations for increased performance and increases the importance of food and medical supplies to a healthy economy.
+[*] Adds three new types of wares (Advanced Schematics, Military Schematics, and Labor Union Contracts). These are using placeholder station modules for now. The wares are secondary resources that stations can use to double production amount and are produced in modules. The modules produce a very small amount without workforce but have the highest workforce impact of any wares in the game.
+[*] The amount of secondary resources required at each station is balanced based on ware type and potential profit of the production cycles.
+[*] Adds a separate production method of energy cells for Xenon with values balanced for lack of workforce.
+[*] Reduces construction time of modules so that the majority of the wait is for resources.
+[*] Removes hullparts from station construction resources. This reduces the chance of a hull part shortage from building ships causing an entire economy to seize. Amount of claytronics and energy cells increased to match pre-change average credit cost.
+[/list]
+[h2][b]Md\Factionlogic_economy.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Stations built after game start by NPC will have more modules. Or early built next stage for staged ones, introduced in 9.0.
+[/list]
+[h2][b]Md\Factionlogic_stations.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Reduced desired wharves for Argon, Paranid, and Split to 1.
+[/list]
+[h2][b]Md\Finalisestations.xml[/b][/h2]
+
+Status: adopted to 9.0
+[list]
+[*] Nudges station generation to use more horizontal connections than vertical.
+[*] Increases station desired storage capacity to at least 2Mil M3 container and/or 1Mil M3 solid/liquid.
+[/list]
+[h2][b]Md\Inituniverse.xml[/b][/h2]
+
+Status: unchanged
+[list]
+[*] Added several ship production wares to Trade Stations.
+[*] Reduces rng for station initial fill.
+[/list]
+[h2][b]Dependencies[/b][/h2]
+[list]
+[*] No mod dependencies at this time.
+[*] Requires Split, Terran, Pirate, and Boron DLC.
+[/list]
+[h2][b]Installation Info[/b][/h2]
+[list]
+[*] This mod is not compatible and must not be used with the older versions of Jobs, Gate, and Ware.
+[*] Folder must be named "deadair_eco" or filepath's for added assets will fail and cause issues.
+[/list]
+[h2][b]Requesting Help[/b][/h2]
+[list]
+[*] It is very helpful to have a debug log with the debug options enabled.
+[*] Include your mod list in any bug reports. There are a lot of poorly written mods out there.
+[*] Best place to contact me is via @ on Egosoft Discord modding channel.
+[/list]
+[h2][b]Download[/b][/h2]
+[list]
+[*] Available on [url=https://www.nexusmods.com/x4foundations/mods/]Nexus Mods[/url]
+[/list]
+[h2][b]Credits[/b][/h2]
+[list]
+[*] [b]Author[/b]: Chem O`Dun, on [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Nexus Mods[/url] and [url=https://steamcommunity.com/id/chemodun/myworkshopfiles/?appid=392160]Steam Workshop[/url]
+[*] [i]"X4: Foundations"[/i] is a trademark of [url=https://www.egosoft.com]Egosoft[/url].
+[/list]
+[h2][b]Acknowledgements[/b][/h2]
+[list]
+[*] [url=https://www.egosoft.com]EGOSOFT[/url] - for the X series.
+[*] [url=https://www.nexusmods.com/profile/DeaDAir]DeadAir[/url] - for the original mod and permission to update it.
+[/list]
+[h2][b]Changelog[/b][/h2]
+
+[h2][1.20] - 2026-05-31[/h2]
+[list]
+[*] Initial public version for X4: Foundations version 9.0.
+[/list]
