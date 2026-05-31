@@ -1,14 +1,24 @@
 # DeadAir Eco by Chem O`Dun
 
-## Message from the author (20250923)
+## Message from the DeadAir
 
 I have decided to completely retire from X4 Modding. I have added licenses to Eco, Scripts, and DeadTater if any persons are interested in using, modifying, or continuing my works. Thank you for all the support and interest in my work over these years
 
-## Dynamic Universe
+## Message from Chem O`Dun
+
+There is adoption the original mod to the game version 9.0.
+Take into account that the mod is not compatible with older versions of X4. If you want to use it on older version, please use the original mod.
+Additionally, please be informed that some ideas from the original mod now is implemented in a vanilla version of the game.
+
+## Dynamic Universe (another DeadAir mod)
+
+Status: unchanged
 
 Minimalized diff mod for economy changes in X4. Readme is often out of date on features or numbers so feel free to contact me on the Egosoft Discord or check patch notes on pushes.
 
 ## AiScripts\Build.Shiptrader.xml
+
+Status: unchanged
 
 - Added chance for player to get rookies or veterans on hiring.
 - Increased amount of ships assigned to trade for NPC shipyards and wharves.
@@ -16,34 +26,48 @@ Minimalized diff mod for economy changes in X4. Readme is often out of date on f
 
 ## Structure Macro Changes
 
+Status: unchanged
+
 - Doubled capacity of drones for build modules to prevent AI from having too few drones to build ships at full speed.
 - Increased Terran habitation modules to have same worker capacity as other factions.
 - Updated threatscore for several xenon modules.
 
 ## Map Changes
 
+Status: adopted to 9.0
+
 - Added asteroid fields to cluster 403, 406
 - Added gas field to cluster 403, 406
 
 ## Libraries\Baskets.xml
 
+Status: adopted to 9.0
+
 - Adjusted wares in baskets used by AI.
 
 ## Libraries\Constructionplans.xml
+
+Status: adopted to 9.0
 
 - Replaced 1M6S dock modules at important stations with 3M6S modules to improve ship docking capacity.
 
 ## Libraries\Defaults.xml
 
+Status: unchanged
+
 - Adjusted threatscore for different ships and increased station threatscore.
 
 ## Libraries\God.xml
+
+Status: adopted to 9.0
 
 - Increases allowed stations per zone to accomodate higher density.
 - Removes Argon and Paranid stations from Split DLC sectors so they stop wasting resources and CPU cycles.
 - Removes several quotas that cause smaller stations but does not change total production module count.
 
 ## Libraries\Jobs.xml
+
+Status: adopted to 9.0
 
 - Adjusted baskets used by traders to improve trader efficien (partly done by 9.0 vanilla).
 - Adjusted trade ships to use traderoutine instead of distributewares aiscript so they will actually respond to trade imbalances on demand side instead of supply side (mostly done by 9.0 vanilla).
@@ -52,28 +76,40 @@ Minimalized diff mod for economy changes in X4. Readme is often out of date on f
 
 ## Libraries\Loadoutrules.xml
 
+Status: unchanged
+
 - Increased weighting values for imprortant drones (transport drones for traders and build drones for construction ships).
 - Attempted to reduce NPC ships loading up on deployables that serve no purpose other than to tank the economy.
 
 ## Libraries\mapdefaults.xml
+
+Status: adopted to 9.0
 
 - Adjusts sector economy ratings to remove undocumented effect on station size generation.
 - For version 9.0, increased resource yields and "recovery" speed of several areas that are vital to the factions economic stability.
 
 ## Libraries\Modulegroups.xml
 
+Status: unchanged
+
 - Added new groups for Advanced Schematics, Military Schematics, and Labor Union Contracts.
 
 ## Libraries\Modules.xml
+
+Status: unchanged
 
 - Increased amount of modules that NPC are allowed to build on a single station. This greatly reduces the number of stations required for a functional economy.
 
 ## Libraries\Parameters.xml
 
+Status: unchanged
+
 - Increased amount of modules that NPC are allowed to build on a single station.
 - Increased default level of drone loadout to prevent ships without enough drones to function effectively.
 
 ## Libraries\People.xml
+
+Status: unchanged
 
 - Increased fill percentage of certain NPC crews.
 - Ships with Regular crews will have 50%+ of the ships capacity.
@@ -83,17 +119,19 @@ Minimalized diff mod for economy changes in X4. Readme is often out of date on f
 
 ## Libraries\Region_Definitions.xml
 
+Status: adopted to 9.0
+
 - Increased resource yields of several areas that are vital to the factions economic stability.
 
-## Libraries\Regionyields.xml
-
-- Reduced the replenish time of all resource areas. Areas that have low or worse density will replenish over 180 minutes. Areas with higher density will replenish over longer time periods. Applicable only for versions before 9.0. In 9.0 it adds only visual effects.
-
 ## Libraries\Ships.xml
+
+Status: unchanged
 
 - Adjusted the crews used by different ships.
 
 ## Libraries\Wares.xml
+
+Status: adopted to 9.0
 
 - Adjusts ware pricing to balance credits / m3 so traders will be rewarded for prioritizing shipping needed resources.
 - Adjusts ware production cycles to standard increments. Scales required resources to match ratio from vanilla (Station calculator will still be accurate for ratio of modules not including workforce).
@@ -106,18 +144,26 @@ Minimalized diff mod for economy changes in X4. Readme is often out of date on f
 
 ## Md\Factionlogic_economy.xml
 
+Status: adopted to 9.0
+
 - Stations built after game start by NPC will have more modules. Or early built next stage for staged ones, introduced in 9.0.
 
 ## Md\Factionlogic_stations.xml
+
+Status: unchanged
 
 - Reduced desired wharves for Argon, Paranid, and Split to 1.
 
 ## Md\Finalisestations.xml
 
+Status: adopted to 9.0
+
 - Nudges station generation to use more horizontal connections than vertical.
 - Increases station desired storage capacity to at least 2Mil M3 container and/or 1Mil M3 solid/liquid.
 
 ## Md\Inituniverse.xml
+
+Status: unchanged
 
 - Added several ship production wares to Trade Stations.
 - Reduces rng for station initial fill.
@@ -138,6 +184,22 @@ Minimalized diff mod for economy changes in X4. Readme is often out of date on f
 - Include your mod list in any bug reports. There are a lot of poorly written mods out there.
 - Best place to contact me is via @ on Egosoft Discord modding channel.
 
-## Why the mods were combined
+## Download
 
-The more separate mods I maintain, the more work it is and the more things I have to consider when making changes which greatly limits potential changes. I am not a programmer by trade and am not supported by anyone. This is purely an interest and hobby of mine. If you like some changes but not others, there are ways to remove some of them without affecting other changes.
+- Available on [Nexus Mods](https://www.nexusmods.com/x4foundations/mods/)
+
+## Credits
+
+- **Author**: Chem O`Dun, on [Nexus Mods](https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659) and [Steam Workshop](https://steamcommunity.com/id/chemodun/myworkshopfiles/?appid=392160)
+- *"X4: Foundations"* is a trademark of [Egosoft](https://www.egosoft.com).
+
+## Acknowledgements
+
+- [EGOSOFT](https://www.egosoft.com) - for the X series.
+- [DeadAir](https://www.nexusmods.com/profile/DeaDAir) - for the original mod and permission to update it.
+
+## Changelog
+
+### [1.20] - 2026-05-31
+
+- Initial public version for X4: Foundations version 9.0.
