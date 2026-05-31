@@ -7,6 +7,11 @@ on:
     paths:
       - '*.md'
   workflow_dispatch:
+    inputs:
+      files:
+        description: 'Markdown files to process (space-separated). Leave empty to process all *.md files.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -23,25 +28,49 @@ jobs:
 
       - name: Get all markdown files
         id: changed-markdown-files
+        if: github.event_name == 'push'
         uses: chemodun/changed-files@0.1.0
         with:
           # File names or patterns to match, separated by spaces
           # Use .*\.md to match all markdown files
           files: .*\.md
 
+      - name: Get markdown files for manual dispatch
+        id: dispatch-markdown-files
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [[ -n "${{ github.event.inputs.files }}" ]]; then
+            files="${{ github.event.inputs.files }}"
+          else
+            files=$(find . -maxdepth 2 -name "*.md" | sed 's|^\./||' | tr '\n' ' ')
+          fi
+          echo "all_changed_files=$files" >> $GITHUB_OUTPUT
+          echo "any_changed=true" >> $GITHUB_OUTPUT
+
+      - name: Resolve files to process
+        id: files-to-process
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "files=${{ steps.dispatch-markdown-files.outputs.all_changed_files }}" >> $GITHUB_OUTPUT
+            echo "any_changed=${{ steps.dispatch-markdown-files.outputs.any_changed }}" >> $GITHUB_OUTPUT
+          else
+            echo "files=${{ steps.changed-markdown-files.outputs.all_changed_files }}" >> $GITHUB_OUTPUT
+            echo "any_changed=${{ steps.changed-markdown-files.outputs.any_changed }}" >> $GITHUB_OUTPUT
+          fi
+
       - name: Install python3
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.files-to-process.outputs.any_changed == 'true'
         run: sudo apt-get update && sudo apt-get install -y python3
 
       - name: Clone markdown-to-bbcode repository
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.files-to-process.outputs.any_changed == 'true'
         run: |
           git clone https://github.com/chemodun/markdown-to-bbcode-simple.git
 
       - name: Process *.md changes
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.files-to-process.outputs.any_changed == 'true'
         env:
-          CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+          CHANGED_FILES: ${{ steps.files-to-process.outputs.files }}
           DELETED_FILES: ${{ steps.changed-markdown-files.outputs.deleted_files }}
         run: |
           git config user.name "Chem O'Dun"
@@ -81,7 +110,7 @@ jobs:
           rm -rf markdown-to-bbcode-simple
 
       - name: Commit and push changes
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.files-to-process.outputs.any_changed == 'true'
         run: |
           if [[ -n $(git status -uno --porcelain) ]]; then
             git commit -m "docs(bbcode): Update bbcode files"
