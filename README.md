@@ -6,7 +6,7 @@ I have decided to completely retire from X4 Modding. I have added licenses to Ec
 
 ## Message from Chem O`Dun
 
-There is adoption the original mod to the game version 9.0.
+There is adoption the original mod to the **game version 9.0**.
 Take into account that the mod is not compatible with older versions of X4. If you want to use it on older version, please use the original mod.
 Additionally, please be informed that some ideas from the original mod now is implemented in a vanilla version of the game.
 
