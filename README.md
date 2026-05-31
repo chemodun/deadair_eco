@@ -186,7 +186,7 @@ Status: unchanged
 
 ## Download
 
-- Available on [Nexus Mods](https://www.nexusmods.com/x4foundations/mods/)
+- Available on [Nexus Mods](https://www.nexusmods.com/x4foundations/mods/2139)
 
 ## Credits
 
