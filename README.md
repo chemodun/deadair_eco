@@ -1,4 +1,4 @@
-# DeadAir Eco by Chem O`Dun
+# DeadAir Economy Overhaul adopted by Chem O`Dun
 
 ## Message from the DeadAir
 
