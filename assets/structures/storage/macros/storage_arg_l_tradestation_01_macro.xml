@@ -18,5 +18,5 @@
   </macro>
 </macros>-->
 <diff>
-<replace sel="//cargo/@max">1250000</replace>
+  <replace sel="//cargo/@max">1250000</replace>
 </diff>
