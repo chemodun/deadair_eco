@@ -200,6 +200,10 @@ Status: unchanged
 
 ## Changelog
 
+### [1.21] - 2026-07-07
+
+- Restored some accidentally removed god entries.
+
 ### [1.20] - 2026-05-31
 
 - Initial public version for X4: Foundations version 9.0.
