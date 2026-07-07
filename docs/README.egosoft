@@ -186,7 +186,7 @@ Status: unchanged
 [/list]
 [size=130][u]Download[/u][/size]
 [list]
-[*] Available on [url=https://www.nexusmods.com/x4foundations/mods/]Nexus Mods[/url]
+[*] Available on [url=https://www.nexusmods.com/x4foundations/mods/2139]Nexus Mods[/url]
 [/list]
 [size=130][u]Credits[/u][/size]
 [list]
@@ -200,6 +200,10 @@ Status: unchanged
 [/list]
 [size=130][u]Changelog[/u][/size]
 
+[size=125][u][1.21] - 2026-07-07[/u][/size]
+[list]
+[*] Restored some accidentally removed god entries.
+[/list]
 [size=125][u][1.20] - 2026-05-31[/u][/size]
 [list]
 [*] Initial public version for X4: Foundations version 9.0.
