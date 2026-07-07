@@ -203,6 +203,7 @@ Status: unchanged
 ### [1.21] - 2026-07-07
 
 - Restored some accidentally removed god entries.
+- Added version with no DA wares for those who want to use the mod but not the wares.
 
 ### [1.20] - 2026-05-31
 
