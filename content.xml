@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <content
   id="DeadAir_Eco"
-  name="DeadAir Economy Overhaul"
+  name="DeadAir Economy Overhaul. W/o DeadAir Wares"
   author="DeadAir. Adopted by Chem O`Dun"
   version="121"
   date="2026-07-07"
   save="false"
   sync="false"
   enabled="true"
-  description="Rebalance of pricing, production, and general economy.">
+  description="Rebalance of pricing, production, and general economy. without DeadAir Wares.">
   <dependency id="ego_dlc_split" optional="false" name="Split Vendetta" />
   <dependency id="ego_dlc_terran" optional="false" name="Cradle of Humanity" />
   <dependency id="ego_dlc_pirate" optional="false" name="Tides of Avarice" />
