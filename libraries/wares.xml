@@ -606,6 +606,15 @@
   <remove sel="/wares/ware[@id='module_gen_conn_observationdeck_02']/production[@method='default'][@amount='1'][@time='225']/primary/ware[@ware='hullparts'][@amount='177']" />
   <replace sel="/wares/ware[@id='module_gen_conn_observationdeck_03']/production[@method='default'][@amount='1'][@time='245']/primary/ware[@ware='claytronics'][@amount='25']/@amount">43</replace>
   <remove sel="/wares/ware[@id='module_gen_conn_observationdeck_03']/production[@method='default'][@amount='1'][@time='245']/primary/ware[@ware='hullparts'][@amount='192']" />
+  <replace sel="/wares/ware[@id='module_gen_dock_m_showroom_01']/production[@method='default'][@amount='1'][@time='315']/@time">120</replace>
+  <replace sel="/wares/ware[@id='module_gen_dock_m_showroom_01']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='claytronics'][@amount='46']/@amount">77</replace>
+  <remove sel="/wares/ware[@id='module_gen_dock_m_showroom_01']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='hullparts'][@amount='349']" />
+  <replace sel="/wares/ware[@id='module_gen_dock_s_showroom_01']/production[@method='default'][@amount='1'][@time='315']/@time">120</replace>
+  <replace sel="/wares/ware[@id='module_gen_dock_s_showroom_01']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='claytronics'][@amount='41']/@amount">69</replace>
+  <remove sel="/wares/ware[@id='module_gen_dock_s_showroom_01']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='hullparts'][@amount='308']" />
+  <replace sel="/wares/ware[@id='module_gen_dock_s_showroom_02']/production[@method='default'][@amount='1'][@time='315']/@time">120</replace>
+  <replace sel="/wares/ware[@id='module_gen_dock_s_showroom_02']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='claytronics'][@amount='42']/@amount">71</replace>
+  <remove sel="/wares/ware[@id='module_gen_dock_s_showroom_02']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='hullparts'][@amount='321']" />
   <replace sel="/wares/ware[@id='module_gen_equip_dockarea_m_01']/production[@method='default'][@amount='1'][@time='650']/@time">325</replace>
   <replace sel="/wares/ware[@id='module_gen_equip_dockarea_m_01']/production[@method='default'][@amount='1'][@time='325']/primary/ware[@ware='claytronics'][@amount='1604']/@amount">2205</replace>
   <remove sel="/wares/ware[@id='module_gen_equip_dockarea_m_01']/production[@method='default'][@amount='1'][@time='325']/primary/ware[@ware='hullparts'][@amount='6620']" />
@@ -619,6 +628,9 @@
   <replace sel="/wares/ware[@id='module_gen_proc_scrapworks']/production[@method='default'][@amount='1'][@time='283']/primary/ware[@ware='claytronics'][@amount='178']/@amount">244</replace>
   <remove sel="/wares/ware[@id='module_gen_proc_scrapworks']/production[@method='default'][@amount='1'][@time='283']/primary/ware[@ware='hullparts'][@amount='733']" />
   <replace sel="/wares/ware[@id='module_gen_proc_scrapworks']/production[@method='terran'][@amount='1'][@time='565']/@time">282</replace>
+  <replace sel="/wares/ware[@id='module_gen_proc_scrapworkskhaak_01']/production[@method='default'][@amount='1'][@time='566']/@time">283</replace>
+  <replace sel="/wares/ware[@id='module_gen_proc_scrapworkskhaak_01']/production[@method='default'][@amount='1'][@time='283']/primary/ware[@ware='claytronics'][@amount='139']/@amount">235</replace>
+  <remove sel="/wares/ware[@id='module_gen_proc_scrapworkskhaak_01']/production[@method='default'][@amount='1'][@time='283']/primary/ware[@ware='hullparts'][@amount='1056']" />
   <replace sel="/wares/ware[@id='module_gen_prod_advancedcomposites_01']/production[@method='default'][@amount='1'][@time='869']/@time">120</replace>
   <replace sel="/wares/ware[@id='module_gen_prod_advancedcomposites_01']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='claytronics'][@amount='648']/@amount">863</replace>
   <remove sel="/wares/ware[@id='module_gen_prod_advancedcomposites_01']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='hullparts'][@amount='2373']" />
@@ -711,6 +723,9 @@
   <replace sel="/wares/ware[@id='module_gen_prod_scrap_recycler']/production[@method='default'][@amount='1'][@time='777']/@time">388</replace>
   <replace sel="/wares/ware[@id='module_gen_prod_scrap_recycler']/production[@method='default'][@amount='1'][@time='388']/primary/ware[@ware='claytronics'][@amount='300']/@amount">400</replace>
   <remove sel="/wares/ware[@id='module_gen_prod_scrap_recycler']/production[@method='default'][@amount='1'][@time='388']/primary/ware[@ware='hullparts'][@amount='1100']" />
+  <replace sel="/wares/ware[@id='module_gen_prod_scrap_recyclerkhaak']/production[@method='default'][@amount='1'][@time='777']/@time">388</replace>
+  <replace sel="/wares/ware[@id='module_gen_prod_scrap_recyclerkhaak']/production[@method='default'][@amount='1'][@time='388']/primary/ware[@ware='claytronics'][@amount='228']/@amount">385</replace>
+  <remove sel="/wares/ware[@id='module_gen_prod_scrap_recyclerkhaak']/production[@method='default'][@amount='1'][@time='388']/primary/ware[@ware='hullparts'][@amount='1733']" />
   <replace sel="/wares/ware[@id='module_gen_prod_shieldcomponents_01']/production[@method='default'][@amount='1'][@time='819']/@time">120</replace>
   <replace sel="/wares/ware[@id='module_gen_prod_shieldcomponents_01']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='claytronics'][@amount='432']/@amount">575</replace>
   <remove sel="/wares/ware[@id='module_gen_prod_shieldcomponents_01']/production[@method='default'][@amount='1'][@time='120']/primary/ware[@ware='hullparts'][@amount='1583']" />
