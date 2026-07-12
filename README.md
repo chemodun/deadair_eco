@@ -200,6 +200,11 @@ Status: unchanged
 
 ## Changelog
 
+### [1.22] - 2026-07-12
+
+- Removed hullparts from the Argon connector pieces added in game version 8.0 (Arc, Cross 02/03, and the T/L junction pieces) that were missed by the original hullparts-removal pass; costs now match their pre-8.0 sibling connectors.
+- Removed hullparts from three dock "Showroom" modules and two Khaak scrap-processing modules (Scrapworks Khaak, Scrap Recycler Khaak) added in game version 9.0 that were likewise missed; costs now match their existing sibling modules.
+
 ### [1.21] - 2026-07-07
 
 - Restored some accidentally removed god entries.
