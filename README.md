@@ -170,7 +170,7 @@ Status: unchanged
 
 ## Dependencies
 
-- - From version 1.23 this mod requires the [Print Extension List](https://www.nexusmods.com/x4foundations/mods/2191) mod to record the game version and the enabled extensions in the debug log. Version `1.00` and upper is required.
+- From version 1.23 this mod requires the [Print Extension List](https://www.nexusmods.com/x4foundations/mods/2191) mod to record the game version and the enabled extensions in the debug log. Version `1.00` and upper is required.
 - Requires Split, Terran, Pirate, and Boron DLC.
 
 ## Installation Info
