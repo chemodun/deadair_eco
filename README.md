@@ -170,7 +170,7 @@ Status: unchanged
 
 ## Dependencies
 
-- No mod dependencies at this time.
+- From version 1.23 this mod requires the [Print Extension List](https://www.nexusmods.com/x4foundations/mods/2191) mod to record the game version and the enabled extensions in the debug log. Version `1.00` and upper is required.
 - Requires Split, Terran, Pirate, and Boron DLC.
 
 ## Installation Info
@@ -199,6 +199,11 @@ Status: unchanged
 - [DeadAir](https://www.nexusmods.com/profile/DeaDAir) - for the original mod and permission to update it.
 
 ## Changelog
+
+### [1.23] - 2026-08-21
+
+- Restored the game-start creation of the defence stations and wharves in the Split DLC sectors, whose absence broke the Split-related game starts. Thanks to `ninchuka` and `Sentenza` for reporting it.
+- Added the `Print Extension List` mod as a dependency, to help with debugging.
 
 ### [1.22] - 2026-07-12
 

@@ -3,8 +3,8 @@
   id="DeadAir_Eco"
   name="DeadAir Economy Overhaul"
   author="DeadAir. Adopted by Chem O`Dun"
-  version="122"
-  date="2026-07-12"
+  version="123"
+  date="2026-08-21"
   save="false"
   sync="false"
   enabled="true"
@@ -15,6 +15,7 @@
   <dependency id="ego_dlc_boron" optional="false" name="Fish People" />
   <dependency id="ego_dlc_timelines" optional="true" name="Not Sandbox DLC" />
   <dependency version="900" />
+  <dependency id="ws_3770927339" optional="false" name="Print Extension List" version="100"></dependency>
   <text language="7" name="DeadAir Eco" description="Rebalance of pricing, production, and general economy." author="DeadAir. Adopted by Chem O`Dun" />
   <text language="33" name="DeadAir Eco" description="Rebalance of pricing, production, and general economy." author="DeadAir. Adopted by Chem O`Dun" />
   <text language="34" name="DeadAir Eco" description="Rebalance of pricing, production, and general economy." author="DeadAir. Adopted by Chem O`Dun" />
