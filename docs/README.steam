@@ -170,7 +170,7 @@ Status: unchanged
 [/list]
 [h2][b]Dependencies[/b][/h2]
 [list]
-[*] No mod dependencies at this time.
+[*] From version 1.23 it requires the [url=https://www.nexusmods.com/x4foundations/mods/2191]Print Extension List[/url], to record the game version and the enabled extensions in the debug log. Version [b]1.00[/b] and upper is required.
 [*] Requires Split, Terran, Pirate, and Boron DLC.
 [/list]
 [h2][b]Installation Info[/b][/h2]
@@ -200,6 +200,11 @@ Status: unchanged
 [/list]
 [h2][b]Changelog[/b][/h2]
 
+[h2][1.23] - 2026-08-21[/h2]
+[list]
+[*] Restored the game-start creation of the defence stations and wharves in the Split DLC sectors, whose absence broke the Split-related game starts. Thanks to [b]ninchuka[/b] and [b]Sentenza[/b] for reporting it.
+[*] Added the [b]Print Extension List[/b] mod as a dependency, to help with debugging.
+[/list]
 [h2][1.22] - 2026-07-12[/h2]
 [list]
 [*] Removed hullparts from the Argon connector pieces added in game version 8.0 (Arc, Cross 02/03, and the T/L junction pieces) that were missed by the original hullparts-removal pass; costs now match their pre-8.0 sibling connectors.
