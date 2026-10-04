@@ -146,7 +146,10 @@ Status: adopted to 9.0
 
 Status: adopted to 9.0
 
-- Stations built after game start by NPC will have more modules. Or early built next stage for staged ones, introduced in 9.0.
+- Stations built after game start by NPC will have more modules.
+- Early expansion of staged (prefab) stations: when a faction has a production shortage of a ware in a sector that stays below the level for a new production module, and an idle prefab there has a next stage producing that ware, the shortage counts as reaching that level with a 1-in-3 chance per evaluation, so the prefab grows by that stage instead of waiting for the regular prefab check hours later.
+- Idle staged stations are offered as candidates whenever a faction looks for a station to extend with a production module. Vanilla rules them all out, because every vanilla prefab plan is fixed; a prefab whose next stage produces the ware is preferred over adding a module to an ordinary station.
+- Fixes the vanilla check of a prefab's next stage, which skipped the stage's last module, so a stage holding only a production module could never be chosen or built.
 
 ## Md\Factionlogic_stations.xml
 
@@ -178,6 +181,10 @@ Status: unchanged
 - This mod is not compatible and must not be used with the older versions of Jobs, Gate, and Ware.
 - Folder must be named "deadair_eco" or filepath's for added assets will fail and cause issues.
 
+## Save state
+
+- The mod is recorded in savegames (`save="true"`). Loading an existing game with it for the first time creates the mod's own stations (Advanced Schematics, Military Schematics and Labor Union Contracts factories) and the Antigone water traders. Removing the mod from such a save shows the usual missing-extension warning.
+
 ## Requesting Help
 
 - It is very helpful to have a debug log with the debug options enabled.
@@ -199,6 +206,12 @@ Status: unchanged
 - [DeadAir](https://www.nexusmods.com/profile/DeaDAir) - for the original mod and permission to update it.
 
 ## Changelog
+
+### [1.24] - unreleased
+
+- The mod is now recorded in savegames; an existing game gets the mod's stations and traders on the first load.
+- Early expansion of staged (prefab) stations on a production shortage works now; the previous logic could never trigger.
+- Fixed a vanilla check that skipped the last module of a prefab's next stage.
 
 ### [1.23] - 2026-08-21
 

@@ -5,7 +5,7 @@
   author="DeadAir. Adopted by Chem O`Dun"
   version="123"
   date="2026-08-21"
-  save="false"
+  save="true"
   sync="false"
   enabled="true"
   description="Rebalance of pricing, production, and general economy.">
