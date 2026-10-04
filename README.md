@@ -183,7 +183,7 @@ Status: unchanged
 
 ## Save state
 
-- The mod is recorded in savegames (`save="true"`). Loading an existing game with it for the first time creates the mod's own stations (Advanced Schematics, Military Schematics and Labor Union Contracts factories) and the Antigone water traders. Removing the mod from such a save shows the usual missing-extension warning.
+- The mod is recorded in savegames (`save="true"`). Loading an existing game with it for the first time creates the mod's own stations (Advanced Schematics, Military Schematics and Labor Union Contracts factories) and ships (Antigone water traders, Xenon miners and traders); existing stations start buying the new wares and use the new prices at once. Stations that already exist keep their layout: the larger module and storage counts apply to stations built after the install. Removing the mod from such a save shows the usual missing-extension warning.
 
 ## Requesting Help
 
