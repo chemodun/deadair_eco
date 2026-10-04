@@ -1,0 +1,5 @@
+# Paths of the normal distribution the no-da-wares variant does not ship. The files beside this list replace their counterparts; everything else ships unchanged.
+assets/structures/production/
+assets/wares/
+extensions/deadair_scripts/
+index/
