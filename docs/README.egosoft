@@ -146,7 +146,10 @@ Status: adopted to 9.0
 
 Status: adopted to 9.0
 [list]
-[*] Stations built after game start by NPC will have more modules. Or early built next stage for staged ones, introduced in 9.0.
+[*] Stations built after game start by NPC will have more modules.
+[*] Early expansion of staged (prefab) stations: when a faction has a production shortage of a ware in a sector that stays below the level for a new production module, and an idle prefab there has a next stage producing that ware, the shortage counts as reaching that level with a 1-in-3 chance per evaluation, so the prefab grows by that stage instead of waiting for the regular prefab check hours later.
+[*] Idle staged stations are offered as candidates whenever a faction looks for a station to extend with a production module. Vanilla rules them all out, because every vanilla prefab plan is fixed; a prefab whose next stage produces the ware is preferred over adding a module to an ordinary station.
+[*] Fixes the vanilla check of a prefab's next stage, which skipped the stage's last module, so a stage holding only a production module could never be chosen or built.
 [/list]
 [size=130][u]Md\Factionlogic_stations.xml[/u][/size]
 
@@ -178,6 +181,21 @@ Status: unchanged
 [*] This mod is not compatible and must not be used with the older versions of Jobs, Gate, and Ware.
 [*] Folder must be named "deadair_eco" or filepath's for added assets will fail and cause issues.
 [/list]
+[size=130][u]Versions[/u][/size]
+
+The mod is available on Nexus Mods as three packages. Install only one of them, into the same "deadair_eco" folder.
+[list]
+[*] [b]Full version[/b], [b]deadair_eco_<version>.zip[/b], the default download. Shows up in the game as "DeadAir Eco". Not recorded in savegames.
+[*] [b]Full version recorded in saves[/b], [b]deadair_eco_saved-<version>.zip[/b]. Identical to the full version except that it is recorded in savegames, and shows up in the game as "DeadAir Eco. Recorded in Saves". [b]Recommended[/b], especially to add the mod to an existing game; see Save state below for what it gives and what it costs.
+[*] [b]Version without DeadAir wares[/b], [b]deadair_eco_wo_da_w-<version>.zip[/b]. The mod without the three DeadAir wares (Advanced Schematics, Military Schematics, Labor Union Contracts), their production modules and factories, and the secondary-resource recipes that use them. Prices, production cycles, workforce effects, module and storage counts, baskets, jobs and faction logic are identical. Shows up in the game as "DeadAir Eco. W/o DeadAir Wares". Not recorded in savegames.
+[/list]
+[size=130][u]Save state[/u][/size]
+[list]
+[*] [b]No[/b] for the full version and the version without DeadAir wares (removing the extension does not break saves). They are not recorded in savegames ([b]save="false"[/b]). Loading an existing game with one of them for the first time applies the new prices and recipes at once and adds the mod's ships (Antigone water traders, Xenon miners and traders). The DeadAir ware factories are not created in an existing game, so stations start buying the DeadAir wares while no factory produces them yet. Removing the mod later shows no missing-extension warning.
+[*] [b]Yes[/b] for the full version recorded in saves (removing the extension breaks saves). It is recorded in savegames ([b]save="true"[/b]). On a new game it plays exactly like the full version. Loading an existing game with it for the first time also creates the mod's own stations: about 50 Advanced Schematics, Military Schematics and Labor Union Contracts factories, fully built and stocked, the same as in a new game. [b]Once the game is saved with this version, the mod cannot be removed from that save[/b]: the game warns about the missing extension, and the save depends on the mod's wares, modules and factories.
+[*] In every version, stations that already exist keep their layout: the larger module and storage counts apply to stations built after the install.
+[*] A save started with the full version can switch to the version recorded in saves later, to get the DeadAir ware factories; switching back is not possible.
+[/list]
 [size=130][u]Requesting Help[/u][/size]
 [list]
 [*] It is very helpful to have a debug log with the debug options enabled.
@@ -200,6 +218,13 @@ Status: unchanged
 [/list]
 [size=130][u]Changelog[/u][/size]
 
+[size=125][u][1.24] - 2026-10-10[/u][/size]
+[list]
+[*] New package: the full version recorded in savegames, which creates the DeadAir ware factories in an existing game (recommended).
+[*] Early expansion of staged (prefab) stations on a production shortage works now; the previous logic could never trigger.
+[*] Fixed a vanilla check that skipped the last module of a prefab's next stage.
+[*] The version without DeadAir wares shows its own name in the game.
+[/list]
 [size=125][u][1.23] - 2026-08-21[/u][/size]
 [list]
 [*] Restored the game-start creation of the defence stations and wharves in the Split DLC sectors, whose absence broke the Split-related game starts. Thanks to [b]ninchuka[/b] and [b]Sentenza[/b] for reporting it.
