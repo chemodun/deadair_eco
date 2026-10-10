@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content
+  id="DeadAir_Eco"
+  name="DeadAir Economy Overhaul. Recorded in Saves"
+  author="DeadAir. Adopted by Chem O`Dun"
+  version="124"
+  date="2026-10-10"
+  save="true"
+  sync="false"
+  enabled="true"
+  description="Rebalance of pricing, production, and general economy. Recorded in savegames.">
+  <dependency id="ego_dlc_split" optional="false" name="Split Vendetta" />
+  <dependency id="ego_dlc_terran" optional="false" name="Cradle of Humanity" />
+  <dependency id="ego_dlc_pirate" optional="false" name="Tides of Avarice" />
+  <dependency id="ego_dlc_boron" optional="false" name="Fish People" />
+  <dependency id="ego_dlc_timelines" optional="true" name="Not Sandbox DLC" />
+  <dependency version="900" />
+  <dependency id="ws_3770927339" optional="false" name="Print Extension List" version="100"></dependency>
+  <text language="7" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="33" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="34" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="39" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="42" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="44" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="48" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="49" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="55" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="81" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="82" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="86" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+  <text language="88" name="DeadAir Eco. Recorded in Saves" description="Rebalance of pricing, production, and general economy. Recorded in savegames." author="DeadAir. Adopted by Chem O`Dun" />
+</content>

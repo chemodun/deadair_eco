@@ -3,9 +3,9 @@
   id="DeadAir_Eco"
   name="DeadAir Economy Overhaul"
   author="DeadAir. Adopted by Chem O`Dun"
-  version="123"
-  date="2026-08-21"
-  save="true"
+  version="124"
+  date="2026-10-10"
+  save="false"
   sync="false"
   enabled="true"
   description="Rebalance of pricing, production, and general economy.">

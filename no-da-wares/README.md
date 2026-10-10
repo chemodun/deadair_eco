@@ -1,4 +1,4 @@
-# DeadAir Economy Overhaul adopted by Chem O`Dun
+# DeadAir Economy Overhaul adopted by Chem O`Dun. Version without DeadAir wares
 
 ## Message from the DeadAir
 
@@ -9,6 +9,11 @@ I have decided to completely retire from X4 Modding. I have added licenses to Ec
 There is adoption the original mod to the **game version 9.0**.
 Take into account that the mod is not compatible with older versions of X4. If you want to use it on older version, please use the original mod.
 Additionally, please be informed that some ideas from the original mod now is implemented in a vanilla version of the game.
+
+## Version without DeadAir wares
+
+- This package, `deadair_eco_wo_da_w-<version>.zip` on Nexus Mods, is the mod without the three DeadAir wares (Advanced Schematics, Military Schematics, Labor Union Contracts), their production modules and factories, and the secondary-resource recipes that use them. Prices, production cycles, workforce effects, module and storage counts, baskets, jobs and faction logic are the same as in the full version.
+- It shows up in the game as "DeadAir Eco. W/o DeadAir Wares". The full version comes in two packages, `deadair_eco_<version>.zip` and `deadair_eco_saved-<version>.zip` (recorded in savegames). Install only one of the three packages, into the same "deadair_eco" folder.
 
 ## Dynamic Universe (another DeadAir mod)
 
@@ -90,9 +95,9 @@ Status: adopted to 9.0
 
 ## Libraries\Modulegroups.xml
 
-Status: unchanged
+Status: adopted to 9.0
 
-- Added new groups for Advanced Schematics, Military Schematics, and Labor Union Contracts.
+- Adjusted the dock module groups used for NPC station generation, in line with the Constructionplans.xml dock change.
 
 ## Libraries\Modules.xml
 
@@ -136,8 +141,6 @@ Status: adopted to 9.0
 - Adjusts ware pricing to balance credits / m3 so traders will be rewarded for prioritizing shipping needed resources.
 - Adjusts ware production cycles to standard increments. Scales required resources to match ratio from vanilla (Station calculator will still be accurate for ratio of modules not including workforce).
 - Adjusts workforce effects to be more pronounced. This allows fewer stations for increased performance and increases the importance of food and medical supplies to a healthy economy.
-- Adds three new types of wares (Advanced Schematics, Military Schematics, and Labor Union Contracts). These are using placeholder station modules for now. The wares are secondary resources that stations can use to double production amount and are produced in modules. The modules produce a very small amount without workforce but have the highest workforce impact of any wares in the game.
-- The amount of secondary resources required at each station is balanced based on ware type and potential profit of the production cycles.
 - Adds a separate production method of energy cells for Xenon with values balanced for lack of workforce.
 - Reduces construction time of modules so that the majority of the wait is for resources.
 - Removes hullparts from station construction resources. This reduces the chance of a hull part shortage from building ships causing an entire economy to seize. Amount of claytronics and energy cells increased to match pre-change average credit cost.
@@ -180,21 +183,11 @@ Status: unchanged
 
 - This mod is not compatible and must not be used with the older versions of Jobs, Gate, and Ware.
 - Folder must be named "deadair_eco" or filepath's for added assets will fail and cause issues.
-
-## Versions
-
-The mod is available on Nexus Mods as three packages. Install only one of them, into the same "deadair_eco" folder.
-
-- **Full version**, `deadair_eco_<version>.zip`, the default download. Shows up in the game as "DeadAir Eco". Not recorded in savegames.
-- **Full version recorded in saves**, `deadair_eco_saved-<version>.zip`. Identical to the full version except that it is recorded in savegames, and shows up in the game as "DeadAir Eco. Recorded in Saves". **Recommended**, especially to add the mod to an existing game; see Save state below for what it gives and what it costs.
-- **Version without DeadAir wares**, `deadair_eco_wo_da_w-<version>.zip`. The mod without the three DeadAir wares (Advanced Schematics, Military Schematics, Labor Union Contracts), their production modules and factories, and the secondary-resource recipes that use them. Prices, production cycles, workforce effects, module and storage counts, baskets, jobs and faction logic are identical. Shows up in the game as "DeadAir Eco. W/o DeadAir Wares". Not recorded in savegames.
+- Do not install a full version alongside this one; they all use the same folder.
 
 ## Save state
 
-- **No** for the full version and the version without DeadAir wares (removing the extension does not break saves). They are not recorded in savegames (`save="false"`). Loading an existing game with one of them for the first time applies the new prices and recipes at once and adds the mod's ships (Antigone water traders, Xenon miners and traders). The DeadAir ware factories are not created in an existing game, so stations start buying the DeadAir wares while no factory produces them yet. Removing the mod later shows no missing-extension warning.
-- **Yes** for the full version recorded in saves (removing the extension breaks saves). It is recorded in savegames (`save="true"`). On a new game it plays exactly like the full version. Loading an existing game with it for the first time also creates the mod's own stations: about 50 Advanced Schematics, Military Schematics and Labor Union Contracts factories, fully built and stocked, the same as in a new game. **Once the game is saved with this version, the mod cannot be removed from that save**: the game warns about the missing extension, and the save depends on the mod's wares, modules and factories.
-- In every version, stations that already exist keep their layout: the larger module and storage counts apply to stations built after the install.
-- A save started with the full version can switch to the version recorded in saves later, to get the DeadAir ware factories; switching back is not possible.
+- **No** (removing the extension does not break saves). This version is not recorded in savegames (`save="false"`). Loading an existing game with it for the first time applies the new prices at once and adds the mod's ships (Antigone water traders, Xenon miners and traders). Stations that already exist keep their layout: the larger module and storage counts apply to stations built after the install. Removing the mod later returns the game to vanilla without a warning.
 
 ## Requesting Help
 
@@ -220,10 +213,9 @@ The mod is available on Nexus Mods as three packages. Install only one of them, 
 
 ### [1.24] - 2026-10-10
 
-- New package: the full version recorded in savegames, which creates the DeadAir ware factories in an existing game (recommended).
 - Early expansion of staged (prefab) stations on a production shortage works now; the previous logic could never trigger.
 - Fixed a vanilla check that skipped the last module of a prefab's next stage.
-- The version without DeadAir wares shows its own name in the game.
+- This version shows its own name in the game.
 
 ### [1.23] - 2026-08-21
 

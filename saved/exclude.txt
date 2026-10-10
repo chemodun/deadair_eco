@@ -1,0 +1,1 @@
+# Variant of the full distribution recorded in savegames: only content.xml differs, nothing is excluded.
